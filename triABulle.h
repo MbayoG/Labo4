@@ -1,6 +1,14 @@
-//
-// Created by maany on 24.11.2020.
-//
+/*
+-----------------------------------------------------------------------------------
+Laboratoire : 04
+Nom du fichier : triABulle.h
+Auteur(s) : Baltensperger Daniel, Pontarolo Stefano, Mbayo Guilain
+Date creation : 03.12.2020
+But : Header de triABulle.cpp.
+Remarque(s) : /
+Compilateur : Mingw-w64 g++ 8.1.0
+-----------------------------------------------------------------------------------
+*/
 
 #ifndef LABO4_TRIABULLE_H
 #define LABO4_TRIABULLE_H

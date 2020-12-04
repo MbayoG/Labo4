@@ -1,6 +1,15 @@
-//
-// Created by maany on 24.11.2020.
-//
+/*
+-----------------------------------------------------------------------------------
+Laboratoire : 04
+Nom du fichier : afficheVector.cpp
+Auteur(s) : Baltensperger Daniel, Pontarolo Stefano, Mbayo Guilain
+Date creation : 03.12.2020
+But : permet d'afficher les valeurs stockées dans un vecteur (unsigned int) ou les valeurs stockées dans les vecteurs
+ 		d'un vecteur de vecteurs (unsigned int).
+Remarque(s) : /
+Compilateur : Mingw-w64 g++ 8.1.0
+-----------------------------------------------------------------------------------
+*/
 
 #include "afficheVector.h"
 using namespace std;

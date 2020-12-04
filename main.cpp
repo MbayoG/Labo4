@@ -1,3 +1,16 @@
+/*
+-----------------------------------------------------------------------------------
+Laboratoire : 04
+Nom du fichier : main.ccp
+Auteur(s) : Baltensperger Daniel, Pontarolo Stefano, Mbayo Guilain
+Date creation : 03.12.2020
+But : Crée des vecteurs, puis applique les différentes fontion dessus afin de les remplir de vecteurs aléatoires,
+ 		puis d'effectuer les tri à bulle, par séléction et par insertion, afficher les vecteurs, calculer les moyennes
+ 		du nombre d'opération ainsi que son écart type.
+Remarque(s) : /
+Compilateur : Mingw-w64 g++ 8.1.0
+-----------------------------------------------------------------------------------
+*/
 #include "triABulle.h"
 #include "afficheVector.h"
 #include "genereVector.h"

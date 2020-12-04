@@ -1,6 +1,14 @@
-//
-// Created by Stefano on 24.11.2020.
-//
+/*
+-----------------------------------------------------------------------------------
+Laboratoire : 04
+Nom du fichier : triParSelection.h
+Auteur(s) : Baltensperger Daniel, Pontarolo Stefano, Mbayo Guilain
+Date creation : 03.12.2020
+But : Header de triParSelection.cpp.
+Remarque(s) : /
+Compilateur : Mingw-w64 g++ 8.1.0
+-----------------------------------------------------------------------------------
+*/
 
 #ifndef LABO4_TRIPARSELECTION_H
 #define LABO4_TRIPARSELECTION_H

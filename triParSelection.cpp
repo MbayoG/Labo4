@@ -1,6 +1,15 @@
-//
-// Created by Stefano on 24.11.2020.
-//
+/*
+-----------------------------------------------------------------------------------
+Laboratoire : 04
+Nom du fichier : triParSelection.cpp
+Auteur(s) : Baltensperger Daniel, Pontarolo Stefano, Mbayo Guilain
+Date creation : 24.11.2020
+But : Permet d'effectuer un tri par séléction sur un vector ou sur les vector d'un vecteur de vector donnés. Compte également le
+ 		nombre d'opérations effectuées et les stock dans un vecteur de nombre d'opération donné.
+Remarque(s) : /
+Compilateur : Mingw-w64 g++ 8.1.0
+-----------------------------------------------------------------------------------
+*/
 
 #include "triParSelection.h"
 using namespace std;

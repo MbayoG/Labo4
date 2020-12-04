@@ -1,6 +1,15 @@
-//
-// Created by maany on 03.12.2020.
-//
+/*
+-----------------------------------------------------------------------------------
+Laboratoire : 04
+Nom du fichier : genereVector.cpp
+Auteur(s) : Baltensperger Daniel, Pontarolo Stefano, Mbayo Guilain
+Date creation : 03.12.2020
+But : permet de générer un nombre de vecteurs donné (via la taille du vecteur de vecteur) ayant une taille données
+		et de les stocker dans un vecteur de vecteur d'unsigned int.
+Remarque(s) : /
+Compilateur : Mingw-w64 g++ 8.1.0
+-----------------------------------------------------------------------------------
+*/
 
 #include "genereVector.h"
 
