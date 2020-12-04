@@ -21,8 +21,6 @@ Compilateur : Mingw-w64 g++ 8.1.0
 using namespace std;
 const int NBVECTOR = 27;
 
-void afficheRendu();
-
 int main() {
 	vector<double> timeTriParSelection(0);
 	vector<double> timeTriABulle(0);
