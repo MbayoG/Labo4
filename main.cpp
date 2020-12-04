@@ -17,10 +17,12 @@ int main() {
 	genereVector(10000, v10000);
 
 
-	//afficheVectorDeVector(v10);
-	afficheVectorDeVector(v100);
+	afficheVectorDeVector(v10);
+	//afficheVectorDeVector(v100);
 	//afficheVectorDeVector(v1000);
 	//afficheVectorDeVector(v10000);
+	triABulleMultiVecteur(v10);
+	afficheVectorDeVector(v10);
 
 	return 0;
 }

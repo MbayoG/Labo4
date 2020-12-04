@@ -11,7 +11,9 @@
 #include <vector>
 #include <cstdlib>
 #include <chrono>
+#include <algorithm>
 
 
 void echange(unsigned int& i, unsigned int& j);
 void triABulle(std::vector<unsigned int> &v);
+void triABulleMultiVecteur(std::vector<std::vector<unsigned int>> &v);

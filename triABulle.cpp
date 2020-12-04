@@ -5,6 +5,10 @@
 #include "triABulle.h"
 using namespace std;
 
+void triABulleMultiVecteur(vector<vector<unsigned int>> &v){
+	for_each(v.begin(), v.end(), triABulle);
+}
+
 void triABulle(vector<unsigned int> &v) {
 int nbOp = 0;
 	if (v.size() > 0) {
