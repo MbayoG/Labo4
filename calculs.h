@@ -20,3 +20,4 @@ Compilateur : Mingw-w64 g++ 8.1.0
 
 double moyenneNbOperation(std::vector<unsigned int> v);
 double ecartTypeOperation(std::vector<unsigned int> v);
+double moyenneTemps(std::vector<double> v);
