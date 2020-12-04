@@ -18,30 +18,36 @@ Compilateur : Mingw-w64 g++ 8.1.0
 
 using namespace std;
 
-void triParInsertionMultiVecteur(vector<vector<unsigned int>> &v, vector<unsigned int> &vOperations){
-    for(vector<unsigned int> &i : v){
-        triParInsertion(i, vOperations);
-    }
+void triParInsertionMultiVecteur(vector<vector<unsigned int>> &v, vector<unsigned int> &vOperations,
+                                 std::vector<double> &time) {
+	for (vector<unsigned int> &i : v) {
+		triParInsertion(i, vOperations, time);
+	}
 }
 
-void triParInsertion(vector<unsigned int>& v, vector<unsigned int> &vOperations) {
-    int tmp, compteur = 0;
-    size_t j;
-    for (size_t i = 1; i < v.size(); ++i) {
-        tmp = v[i];
-        j = i;
+void triParInsertion(vector<unsigned int> &v, vector<unsigned int> &vOperations, std::vector<double> &time) {
+	chrono::duration<double> diff;
+	auto start = chrono::high_resolution_clock::now();
+	int tmp, compteur = 0;
+	size_t j;
+	for (size_t i = 1; i < v.size(); ++i) {
+		tmp = v[i];
+		j = i;
 
-        while (j >= 1 && v[j - 1] > tmp) {
-            if(j >= 1)
-                compteur++; // v[j - 1] > tmp
-            v[j] = v[j - 1];
-            --j;
-            compteur +=3; //v[j] = v[j - 1] && --j && j >= 1
-        }
+		while (j >= 1 && v[j - 1] > tmp) {
+			if (j >= 1)
+				compteur++; // v[j - 1] > tmp
+			v[j] = v[j - 1];
+			--j;
+			compteur += 3; //v[j] = v[j - 1] && --j && j >= 1
+		}
 
-        v[j] = tmp;
-        compteur += 6; // tmp = v[i] && j = i && i++ && i < v.size() && j >= 1 && v[j - 1] > tmp ==> false &&v[j] = tmp
-    }
-    compteur+=2; //size_t = 1 && i < v.size() ==> false
-    vOperations.resize(vOperations.size() + 1, compteur);
+		v[j] = tmp;
+		compteur += 6; // tmp = v[i] && j = i && i++ && i < v.size() && j >= 1 && v[j - 1] > tmp ==> false &&v[j] = tmp
+	}
+	compteur += 2; //size_t = 1 && i < v.size() ==> false
+
+	auto end = chrono::high_resolution_clock::now();
+	time.push_back(chrono::duration<double, std::milli>(end - start).count());
+	vOperations.resize(vOperations.size() + 1, compteur);
 }
