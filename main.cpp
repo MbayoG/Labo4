@@ -15,11 +15,14 @@ Compilateur : Mingw-w64 g++ 8.1.0
 #include "afficheVector.h"
 #include "genereVector.h"
 #include "calculs.h"
+#include "triParSelection.h"
+#include "triParInsertion.h"
 
 using namespace std;
 const int NBVECTOR = 27;
 int main() {
 	vector<unsigned int> nbOperationTriABulle(0);
+	vector<unsigned int> nbOperationTriParSelection(0);
 	vector<vector<unsigned int>> v10(NBVECTOR);
 	vector<vector<unsigned int>> v100(NBVECTOR);
 	vector<vector<unsigned int>> v1000(NBVECTOR);
@@ -37,12 +40,18 @@ int main() {
 	//afficheVectorDeVector(v100);
 	//afficheVectorDeVector(v1000);
 	//afficheVectorDeVector(v10000);
-	triABulleMultiVecteur(v10, nbOperationTriABulle);
+	//triABulleMultiVecteur(v10, nbOperationTriABulle);
+	//triParSelectionMultiVecteur(v10, nbOperationTriParSelection);
+	triParInsertionMultiVecteur(v10, nbOperationTriParSelection);
 	cout << endl << endl;
 	afficheVectorDeVector(v10);
 	//afficheVector(nbOperationTriABulle);
 
 	//cout << "Moyenne du nombre d'operations via le tri a bulle: " << moyenneNbOperation(nbOperationTriABulle) << endl;
 	//cout << "Ecart type du nombre d'operations via le tri a bulle: " << ecartTypeOperation(nbOperationTriABulle) << endl;
+	//cout << "Moyenne du nombre d'operations via le tri par selection: " << moyenneNbOperation(nbOperationTriParSelection) << endl;
+	//cout << "Ecart type du nombre d'operations via le tri par selection: " << ecartTypeOperation(nbOperationTriParSelection) << endl;
+	cout << "Moyenne du nombre d'operations via le tri par insertion: " << moyenneNbOperation(nbOperationTriParSelection) << endl;
+	cout << "Ecart type du nombre d'operations via le tri par insertion: " << ecartTypeOperation(nbOperationTriParSelection) << endl;
 	return EXIT_SUCCESS;
 }

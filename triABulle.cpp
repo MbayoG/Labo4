@@ -47,7 +47,7 @@ int nbOp = 0;
 }
 
 void echange(unsigned int& i, unsigned int& j){
-	int temp;
+	unsigned int temp;
 	temp = j;
 	j = i;
 	i = temp;
