@@ -1,6 +1,8 @@
 #include "triABulle.h"
 #include "afficheVector.h"
 #include "genereVector.h"
+#include "calculs.h"
+
 using namespace std;
 const int NBVECTOR = 27;
 int main() {
@@ -26,5 +28,7 @@ int main() {
 	afficheVectorDeVector(v10);
 	afficheVector(nbOperationTriABulle);
 
-	return 0;
+	cout << "Moyenne du nombre d'operations via le tri a bulle: " << moyenneNbOperation(nbOperationTriABulle) << endl;
+	cout << "Ecart type du nombre d'operations via le tri a bulle: " << ecartTypeOperation(nbOperationTriABulle) << endl;
+	return EXIT_SUCCESS;
 }
