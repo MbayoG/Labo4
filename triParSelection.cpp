@@ -3,6 +3,7 @@
 //
 
 #include "triParSelection.h"
+using namespace std;
 
 void triParSelectionMultiVecteur(vector<vector<unsigned int>> &v, vector<unsigned int> &vOperations){
 	for(vector<unsigned int> &i : v){
