@@ -12,16 +12,18 @@ Compilateur : Mingw-w64 g++ 8.1.0
 */
 
 #include "triParSelection.h"
+
 using namespace std;
 
-void triParSelectionMultiVecteur(vector<vector<unsigned int>> &v, vector<unsigned int> &vOperations){
+void triParSelectionMultiVecteur(vector<vector<unsigned int>> &v, vector<unsigned int> &vOperations, vector<double> &time){
 	for(vector<unsigned int> &i : v){
-		triParSelection(i, vOperations);
+		triParSelection(i, vOperations, time);
 	}
 }
 
-void triParSelection(vector<unsigned> &v, vector<unsigned int> &vOperations) {
-
+void triParSelection(vector<unsigned> &v, vector<unsigned int> &vOperations, vector<double> &time) {
+	chrono::duration<double> diff;
+	auto start = chrono::high_resolution_clock::now();
 	unsigned cmp = 0;
 
 	if (v.size() > 0) {
@@ -47,6 +49,9 @@ void triParSelection(vector<unsigned> &v, vector<unsigned int> &vOperations) {
 		cmp += 3; // initialisation de i, v.size() - 1 et premier i < v.size()
 	}
 	cmp++; // v.size()
+
+	auto end = chrono::high_resolution_clock::now();
+	time.push_back(chrono::duration<double, std::milli>(end - start).count());
 
 	vOperations.resize(vOperations.size() + 1, cmp);
 }
