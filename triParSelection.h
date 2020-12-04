@@ -6,7 +6,6 @@
 #define LABO4_TRIPARSELECTION_H
 #include <vector>
 #include <cstdlib>
-using namespace std;
 
 
 void triParSelection(vector<unsigned>& v, vector<unsigned int> &vOperations);
