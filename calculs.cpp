@@ -14,18 +14,35 @@ Compilateur : Mingw-w64 g++ 8.1.0
 
 using namespace std;
 
-double moyenneNbOperation(vector<unsigned int> v){
-	unsigned int total = 0;
-	for(unsigned int i : v){
-		total += i;
+double moyenneNbOperation(vector<unsigned int> v) {
+	unsigned int total, cmp = 0;
+	for (unsigned int i : v) {
+		if (cmp >= 2) {
+			total += i;
+		}
+		cmp++;
 	}
-	return total/v.size();
+	return total / (v.size() - 2);
 }
 
-double ecartTypeOperation(vector<unsigned int> v){
-	unsigned int total = 0;
-	for(unsigned int i : v){
-		total += pow(i-moyenneNbOperation(v),2);
+double ecartTypeOperation(vector<unsigned int> v) {
+	unsigned int total, cmp = 0;
+	for (unsigned int i : v) {
+		if (cmp >= 2) {
+			total += pow(i - moyenneNbOperation(v), 2);
+		}
+		cmp++;
 	}
-	return sqrt(total/v.size());
+	return sqrt(total / (v.size() - 2));
+}
+
+double moyenneTemps(vector<double> v) {
+	double total, cmp = 0;
+	for (double i : v) {
+		if (cmp >= 2) {
+			total += i;
+		}
+		cmp++;
+	}
+	return total / (v.size() - 2);
 }
