@@ -22,6 +22,7 @@ Compilateur : Mingw-w64 g++ 8.1.0
 #include <algorithm>
 
 
+
 void echange(unsigned int& i, unsigned int& j);
-void triABulle(std::vector<unsigned int> &v, std::vector<unsigned int> &vOperations);
-void triABulleMultiVecteur(std::vector<std::vector<unsigned int>> &v, std::vector<unsigned int> &vOperations);
+void triABulle(std::vector<unsigned int> &v, std::vector<unsigned int> &vOperations, std::vector<double> &time);
+void triABulleMultiVecteur(std::vector<std::vector<unsigned int>> &v, std::vector<unsigned int> &vOperations, std::vector<double> &time);
