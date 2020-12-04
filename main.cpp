@@ -25,10 +25,11 @@ int main() {
 	//afficheVectorDeVector(v1000);
 	//afficheVectorDeVector(v10000);
 	triABulleMultiVecteur(v10, nbOperationTriABulle);
+	cout << endl << endl;
 	afficheVectorDeVector(v10);
-	afficheVector(nbOperationTriABulle);
+	//afficheVector(nbOperationTriABulle);
 
-	cout << "Moyenne du nombre d'operations via le tri a bulle: " << moyenneNbOperation(nbOperationTriABulle) << endl;
-	cout << "Ecart type du nombre d'operations via le tri a bulle: " << ecartTypeOperation(nbOperationTriABulle) << endl;
+	//cout << "Moyenne du nombre d'operations via le tri a bulle: " << moyenneNbOperation(nbOperationTriABulle) << endl;
+	//cout << "Ecart type du nombre d'operations via le tri a bulle: " << ecartTypeOperation(nbOperationTriABulle) << endl;
 	return EXIT_SUCCESS;
 }

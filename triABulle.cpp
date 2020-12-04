@@ -6,7 +6,7 @@
 using namespace std;
 
 void triABulleMultiVecteur(vector<vector<unsigned int>> &v, vector<unsigned int> &vOperations){
-	for(vector<unsigned int> i : v){
+	for(vector<unsigned int> &i : v){
 		triABulle(i, vOperations);
 	}
 }
