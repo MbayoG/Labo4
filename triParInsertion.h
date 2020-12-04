@@ -15,8 +15,9 @@ Compilateur : Mingw-w64 g++ 8.1.0
 
 #include <vector>
 #include <cstdlib>
+#include <chrono>
 
-void triParInsertion(std::vector<unsigned>& v, std::vector<unsigned int> &vOperations);
-void triParInsertionMultiVecteur(std::vector<std::vector<unsigned int>> &v, std::vector<unsigned int> &vOperations);
+void triParInsertion(std::vector<unsigned>& v, std::vector<unsigned int> &vOperations, std::vector<double> &time);
+void triParInsertionMultiVecteur(std::vector<std::vector<unsigned int>> &v, std::vector<unsigned int> &vOperations, std::vector<double> &time);
 
 #endif //LABO4_TRIPARINSERTION_H
