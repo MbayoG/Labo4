@@ -5,11 +5,13 @@
 #include "triABulle.h"
 using namespace std;
 
-void triABulleMultiVecteur(vector<vector<unsigned int>> &v){
-	for_each(v.begin(), v.end(), triABulle);
+void triABulleMultiVecteur(vector<vector<unsigned int>> &v, vector<unsigned int> &vOperations){
+	for(vector<unsigned int> i : v){
+		triABulle(i, vOperations);
+	}
 }
 
-void triABulle(vector<unsigned int> &v) {
+void triABulle(vector<unsigned int> &v, vector<unsigned int> &vOperations) {
 int nbOp = 0;
 	if (v.size() > 0) {
 		bool fini = false;
@@ -32,7 +34,7 @@ int nbOp = 0;
 		nbOp +=1; //nbOperation pour le !fini
 	}
 	nbOp +=1; //nbOperation pour le v.size > 0
-	cout << "nbOp: " << nbOp << endl;
+	vOperations.resize(vOperations.size() + 1, nbOp);
 }
 
 void echange(unsigned int& i, unsigned int& j){
