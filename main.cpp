@@ -43,61 +43,25 @@ int main() {
 	genereVector(1000, v1000);
 	genereVector(10000, v10000);
 
-	cout << "taille 10" <<endl;
+	cout << "taille 10:" <<endl;
 	test(v10, timeTriParSelection, timeTriABulle, timeTriParInsertion, nbOperationTriABulle,
 		nbOperationTriParSelection, nbOperationTriParInsertion,
 		indiceRandom, 10);
 
-	cout << endl << endl << "taille 100" <<endl;
+	cout << endl << endl << "taille 100:" <<endl;
 	test(v100, timeTriParSelection, timeTriABulle, timeTriParInsertion, nbOperationTriABulle,
 		  nbOperationTriParSelection, nbOperationTriParInsertion,
 		  indiceRandom, 100);
 
-	cout << endl << endl << "taille 1000" <<endl;
+	cout << endl << endl << "taille 1000:" <<endl;
 	test(v1000, timeTriParSelection, timeTriABulle, timeTriParInsertion, nbOperationTriABulle,
 		  nbOperationTriParSelection, nbOperationTriParInsertion,
 		  indiceRandom, 1000);
 
-	cout << endl << endl << "taille 10000" <<endl;
+	cout << endl << endl << "taille 10000:" <<endl;
 	test(v10000, timeTriParSelection, timeTriABulle, timeTriParInsertion, nbOperationTriABulle,
 		  nbOperationTriParSelection, nbOperationTriParInsertion,
 		  indiceRandom, 10000);
-
-
-
-
-
-//	afficheVector(v10000[0]);
-//	afficheVector(v10000[1]);
-//	afficheVectorDeVector(v10000);
-//	triParSelectionMultiVecteur(v10000, nbOperationTriParSelection, timeTriParSelection);
-//	genereVector(10000, v10000);
-//	triABulleMultiVecteur(v10000, nbOperationTriABulle, timeTriABulle);
-//	genereVector(10000, v10000);
-//	triParInsertionMultiVecteur(v10000, nbOperationTriParInsertion, timeTriParInsertion);
-//
-//
-//	cout << endl << endl;
-//	afficheVectorDeVector(v10000);
-//
-//
-//	cout << "Moyenne du nombre d'operations via le tri a bulle: " << moyenneNbOperation(nbOperationTriABulle) << endl;
-//	cout << "Ecart type du nombre d'operations via le tri a bulle: " << ecartTypeOperation(nbOperationTriABulle) << endl;
-//	cout << "Moyenne du temps via le tri a bulle: " << moyenneTemps(timeTriABulle) << endl;
-//
-//	cout << "Moyenne du nombre d'operations via le tri par insertion: " << moyenneNbOperation(nbOperationTriParInsertion)
-//	     << endl;
-//	cout << "Ecart type du nombre d'operations via le tri par insertion: "
-//	     << ecartTypeOperation(nbOperationTriParInsertion)
-//	     << endl;
-//	cout << "Moyenne du temps via le tri par insertion: " << moyenneTemps(timeTriParInsertion) << endl;
-//
-//	cout << sommeTemps;
-//	cout << "Moyenne du nombre d'operations via le tri par selection: " << moyenneNbOperation(nbOperationTriParSelection)
-//	     << endl;
-//	cout << "Ecart type du nombre d'operations via le tri par selection: " << ecartTypeOperation
-//		(nbOperationTriParSelection) << endl;
-//	cout << "Moyenne du temps via le tri par selection: " << moyenneTemps(timeTriParSelection) << endl;
 
 	return EXIT_SUCCESS;
 }
@@ -118,19 +82,19 @@ void test(vector<vector<unsigned int>> &v, vector<double> &timeTriParSelection, 
 	afficheVector(v[TABDECROISSANT]);
 	afficheVector(v[indiceRandom]);
 	cout << "Moyenne du nombre d'operations via le tri a bulle: " << moyenneNbOperation(nbOperationTriABulle) << endl;
-	cout << "Ecart type du nombre d'operations via le tri a bulle: " << ecartTypeOperation(nbOperationTriABulle) << endl;
+	/*cout << "Ecart type du nombre d'operations via le tri a bulle: " << ecartTypeOperation(nbOperationTriABulle) << endl;*/
 	cout << "Moyenne du temps via le tri a bulle: " << moyenneTemps(timeTriABulle) << endl;
 
 	cout << "Moyenne du nombre d'operations via le tri par insertion: " << moyenneNbOperation(nbOperationTriParInsertion)
 		  << endl;
-	cout << "Ecart type du nombre d'operations via le tri par insertion: "
+	/*cout << "Ecart type du nombre d'operations via le tri par insertion: "
 		  << ecartTypeOperation(nbOperationTriParInsertion)
-		  << endl;
+		  << endl;*/
 	cout << "Moyenne du temps via le tri par insertion: " << moyenneTemps(timeTriParInsertion) << endl;
 	cout << "Moyenne du nombre d'operations via le tri par selection: " << moyenneNbOperation(nbOperationTriParSelection)
 		  << endl;
-	cout << "Ecart type du nombre d'operations via le tri par selection: " << ecartTypeOperation
-		(nbOperationTriParSelection) << endl;
+	/*cout << "Ecart type du nombre d'operations via le tri par selection: " << ecartTypeOperation
+		(nbOperationTriParSelection) << endl;*/
 	cout << "Moyenne du temps via le tri par selection: " << moyenneTemps(timeTriParSelection) << endl;
 	timeTriParInsertion.clear();
 	timeTriABulle.clear();
